@@ -1,4 +1,4 @@
-package models;
+package cards;
 
 public abstract class Card {
     private String name;
@@ -7,5 +7,4 @@ public abstract class Card {
         this.name = name;
     }
 
-    public abstract void play();
 }

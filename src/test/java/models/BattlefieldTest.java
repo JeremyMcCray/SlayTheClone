@@ -1,5 +1,7 @@
 package models;
 
+import cards.UnitCard;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -9,32 +11,29 @@ import static org.junit.Assert.*;
 
 public class BattlefieldTest {
 
-    Battlefield battlefield;
-    @Before
-    public void setUp() throws Exception {
-        ArrayList<Unit> playerUnits = new ArrayList<>();
-        ArrayList<Unit> enemyUnits = new ArrayList<>();
-        playerUnits.add(new Knight());
-        playerUnits.add(new Knight());
-        enemyUnits.add(new Gobbo());
-        enemyUnits.add(new Gobbo());
-       battlefield = new Battlefield(playerUnits,enemyUnits);
-    }
 
     @Test
     public void getEnemyFrontUnit() {
-        Unit gobbo = battlefield.getEnemyFrontUnit();
-        int actual = gobbo.myUnitNumber;
+        ArrayList<UnitCard> playerUnits = new ArrayList<>();
+        ArrayList<UnitCard> enemyUnits = new ArrayList<>();
+        playerUnits.add(new Knight());
+        playerUnits.add(new Knight());
+        enemyUnits.add(new Gobbo());
+        enemyUnits.add(new Gobbo());
+        Battlefield battlefield = new Battlefield(playerUnits, enemyUnits);
+
+        UnitCard gobbo = battlefield.getEnemyFrontUnit();
+        int actual = gobbo.getMyUnitNumber();
         int expected = 0;
-        assertEquals(expected,actual);
+        assertEquals(expected, actual);
     }
 
     @Test
     public void getEnemyFrontUnitNoUnit() {
-        ArrayList<Unit> test1 = new ArrayList<>();
-        ArrayList<Unit> test2 = new ArrayList<>();
-        Battlefield test = new Battlefield(test1,test2);
-        Unit unit = test.getEnemyFrontUnit();
+        ArrayList<UnitCard> test1 = new ArrayList<>();
+        ArrayList<UnitCard> test2 = new ArrayList<>();
+        Battlefield test = new Battlefield(test1, test2);
+        UnitCard unit = test.getEnemyFrontUnit();
 
         assertNull(unit);
     }
@@ -51,4 +50,5 @@ public class BattlefieldTest {
     @Test
     public void placeEnemyUnit() {
     }
+
 }

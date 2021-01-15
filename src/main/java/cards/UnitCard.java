@@ -1,14 +1,14 @@
-package models;
+package cards;
 
-public abstract class Unit {
-    String name;
+public abstract class UnitCard extends Card {
+
     int health;
     int shields;
     int attack;
     int myUnitNumber;
 
-    public Unit(String name, int health, int shields, int attack) {
-        this.name = name;
+    public UnitCard(String name, int health, int shields, int attack) {
+       super(name);
         this.health = health;
         this.shields = shields;
         this.attack = attack;
@@ -35,8 +35,8 @@ public abstract class Unit {
         this.shields -= damage;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setMyUnitNumber(int myUnitNumber) {
+        this.myUnitNumber = myUnitNumber;
     }
 
     public int getMyUnitNumber() {
