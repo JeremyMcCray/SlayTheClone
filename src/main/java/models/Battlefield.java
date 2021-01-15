@@ -17,6 +17,7 @@ public class Battlefield {
         }
         else return null;
     }
+
     public Unit getPlayerFrontUnit(){
         if(playerUnits.size() > 0){
             return playerUnits.get(0);

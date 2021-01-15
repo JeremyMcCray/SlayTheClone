@@ -6,4 +6,6 @@ public abstract class Card {
     public Card(String name) {
         this.name = name;
     }
+
+    public abstract void play();
 }

@@ -5,6 +5,7 @@ public abstract class Unit {
     int health;
     int shields;
     int attack;
+    int myUnitNumber;
 
     public Unit(String name, int health, int shields, int attack) {
         this.name = name;
@@ -32,5 +33,13 @@ public abstract class Unit {
 
     private void damageShields(int damage){
         this.shields -= damage;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getMyUnitNumber() {
+        return myUnitNumber;
     }
 }
