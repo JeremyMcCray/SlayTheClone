@@ -5,21 +5,40 @@ import java.util.Stack;
 
 public class EventManager {
     Stack<Event> eventStack;
-    ArrayList<Listener> listeners;
     Event currentEvent;
 
-    public EventManager(Event startingEvent, ArrayList<Listener> startingListeners) {
+    public EventManager(Event startingEvent) {
         eventStack = new Stack<>();
-        listeners = startingListeners;
         currentEvent = startingEvent;
     }
 
-    public void addListener(Listener l) {
-        this.listeners.add(l);
+    private void loadNextEvent() {
+        currentEvent = eventStack.pop();
     }
 
-    public void listen() {
-        // TODO: iterate through listeners, checking to activate ones which react to current event
-        return;
+    private void loadEventsIntoStack() {
+        for (int i = 0; i < currentEvent.baseListeners.size(); i++) {
+            eventStack.push(currentEvent.baseListeners.get(i));
+        }
+        for (int i = 0; i < currentEvent.addedListeners.size(); i++) {
+            eventStack.push(currentEvent.addedListeners.get(i));
+        }
+    }
+
+    public void next() {
+        loadNextEvent();
+        loadEventsIntoStack();
+    }
+
+    public Event getCurrentEvent() {
+        return this.currentEvent;
+    }
+
+    public Event getNextEvent() {
+        return this.eventStack.peek();
+    }
+
+    public Stack<Event> getEventStack() {
+        return this.eventStack;
     }
 }
