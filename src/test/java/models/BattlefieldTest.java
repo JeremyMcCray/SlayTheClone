@@ -25,6 +25,7 @@ public class BattlefieldTest {
         UnitCard gobbo = battlefield.getEnemyFrontUnit();
         int actual = gobbo.getMyUnitNumber();
         int expected = 0;
+        System.out.println(gobbo.toString());
         System.out.println(battlefield.toString());
         assertEquals(expected, actual);
     }
