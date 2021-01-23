@@ -69,4 +69,5 @@ public abstract class UnitCard extends Card {
                 + "\n";
     }
 
+    public void play(){}
 }
