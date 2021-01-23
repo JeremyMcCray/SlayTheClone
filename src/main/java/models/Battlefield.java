@@ -1,10 +1,8 @@
 package models;
 
-import cards.UnitCard;
+import cards.UnitCards.UnitCard;
 
 import java.util.ArrayList;
-import java.util.List;
-import java.util.StringJoiner;
 import java.util.stream.Collectors;
 
 public class Battlefield {

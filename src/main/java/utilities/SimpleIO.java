@@ -1,6 +1,6 @@
 package utilities;
 
-import cards.UnitCard;
+import cards.UnitCards.UnitCard;
 
 import java.util.List;
 import java.util.Scanner;

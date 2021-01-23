@@ -1,6 +1,6 @@
 package unitSpawning;
 
-import cards.UnitCard;
+import cards.UnitCards.UnitCard;
 import models.Player;
 
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package cards;
+package cards.spellUntargetedCards;
 
 public class SpellUntargetedCard {
 

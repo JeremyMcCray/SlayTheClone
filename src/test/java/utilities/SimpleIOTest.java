@@ -1,8 +1,8 @@
 package utilities;
 
-import cards.UnitCard;
-import models.Gobbo;
-import models.Knight;
+import cards.UnitCards.UnitCard;
+import cards.UnitCards.Gobbo;
+import cards.UnitCards.Knight;
 import org.junit.Test;
 import java.util.ArrayList;
 
