@@ -1,8 +1,8 @@
 package models;
 
-import cards.UnitCard;
-import org.junit.After;
-import org.junit.Before;
+import cards.UnitCards.Gobbo;
+import cards.UnitCards.Knight;
+import cards.UnitCards.UnitCard;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -23,9 +23,11 @@ public class BattlefieldTest {
         Battlefield battlefield = new Battlefield(playerUnits, enemyUnits);
 
         UnitCard gobbo = battlefield.getEnemyFrontUnit();
+        Knight knight = (Knight) battlefield.getPlayerFrontUnit();
         int actual = gobbo.getMyUnitNumber();
         int expected = 0;
         System.out.println(gobbo.toString());
+        System.out.println(knight.toString());
         System.out.println(battlefield.toString());
         assertEquals(expected, actual);
     }
