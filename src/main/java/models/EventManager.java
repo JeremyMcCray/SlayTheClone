@@ -16,19 +16,19 @@ public class EventManager {
         currentEvent = eventStack.pop();
     }
 
-    private void loadEventsIntoStack() {
-        for (int i = 0; i < currentEvent.baseListeners.size(); i++) {
-            eventStack.push(currentEvent.baseListeners.get(i));
-        }
-        for (int i = 0; i < currentEvent.addedListeners.size(); i++) {
-            eventStack.push(currentEvent.addedListeners.get(i));
-        }
-    }
+//    private void loadEventsIntoStack() {
+//        for (int i = 0; i < currentEvent.baseListeners.size(); i++) {
+//            eventStack.push(currentEvent.baseListeners.get(i));
+//        }
+//        for (int i = 0; i < currentEvent.addedListeners.size(); i++) {
+//            eventStack.push(currentEvent.addedListeners.get(i));
+//        }
+//    }
 
-    public void next() {
-        loadNextEvent();
-        loadEventsIntoStack();
-    }
+//    public void next() {
+//        loadNextEvent();
+//        loadEventsIntoStack();
+//    }
 
     public Event getCurrentEvent() {
         return this.currentEvent;

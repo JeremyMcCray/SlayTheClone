@@ -42,4 +42,21 @@ public abstract class UnitCard extends Card {
     public int getMyUnitNumber() {
         return myUnitNumber;
     }
+
+    public int getHealth() {
+        return health;
+    }
+
+    public int getShields() {
+        return shields;
+    }
+
+    public int getAttack() {
+        return attack;
+    }
+
+    @Override
+    public String toString() {
+        return this.getName() + "\n Health: " + this.getHealth() + "\n Shields: " + this.getShields() + "\n Attack: " + this.getAttack() + "\n";
+    }
 }

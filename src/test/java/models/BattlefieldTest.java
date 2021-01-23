@@ -41,6 +41,7 @@ public class BattlefieldTest {
 
     @Test
     public void getPlayerFrontUnit() {
+
     }
 
     @Test
@@ -49,6 +50,6 @@ public class BattlefieldTest {
 
     @Test
     public void placeEnemyUnit() {
-    }
 
+    }
 }
