@@ -25,6 +25,8 @@ public class BattlefieldTest {
         UnitCard gobbo = battlefield.getEnemyFrontUnit();
         int actual = gobbo.getMyUnitNumber();
         int expected = 0;
+        System.out.println(gobbo.toString());
+        System.out.println(battlefield.toString());
         assertEquals(expected, actual);
     }
 
@@ -35,12 +37,15 @@ public class BattlefieldTest {
         Battlefield test = new Battlefield(test1, test2);
         UnitCard unit = test.getEnemyFrontUnit();
 
+
         assertNull(unit);
     }
 
 
     @Test
     public void getPlayerFrontUnit() {
+
+
     }
 
     @Test
@@ -49,6 +54,6 @@ public class BattlefieldTest {
 
     @Test
     public void placeEnemyUnit() {
-    }
 
+    }
 }

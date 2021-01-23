@@ -1,6 +1,9 @@
 package cards;
 
+import utilities.SimpleIO;
+
 public abstract class UnitCard extends Card {
+    SimpleIO io = SimpleIO.getInstance();
 
     int health;
     int shields;
@@ -8,7 +11,7 @@ public abstract class UnitCard extends Card {
     int myUnitNumber;
 
     public UnitCard(String name, int health, int shields, int attack) {
-       super(name);
+        super(name);
         this.health = health;
         this.shields = shields;
         this.attack = attack;
@@ -31,7 +34,7 @@ public abstract class UnitCard extends Card {
         }
     }
 
-    private void damageShields(int damage){
+    private void damageShields(int damage) {
         this.shields -= damage;
     }
 
@@ -42,4 +45,28 @@ public abstract class UnitCard extends Card {
     public int getMyUnitNumber() {
         return myUnitNumber;
     }
+
+    public int getHealth() {
+        return health;
+    }
+
+    public int getShields() {
+        return shields;
+    }
+
+    public int getAttack() {
+        return attack;
+    }
+
+    @Override
+    public String toString() {
+        return this.getName() + "\n Health: "
+                + this.getHealth() +
+                "\n Shields: "
+                + this.getShields()
+                + "\n Attack: "
+                + this.getAttack()
+                + "\n";
+    }
+
 }
