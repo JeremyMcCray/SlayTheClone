@@ -1,27 +1,47 @@
 package utilities;
 
+import cardHandling.Hand;
+import cards.Card;
 import cards.UnitCards.UnitCard;
 import cards.UnitCards.Gobbo;
 import cards.UnitCards.Knight;
+import cards.spellTargetedCards.SpellTargetedCard;
+import cards.spellTargetedCards.fireBall;
+import org.junit.Before;
 import org.junit.Test;
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class SimpleIOTest {
 
     SimpleIO test = new SimpleIO();
+    List<Card> playerCards = new ArrayList<>();
+    List<Card> enemyCards = new ArrayList<>();
+
+    @Before
+    public void setUp() throws Exception {
+        playerCards.add(new Knight());
+        playerCards.add(new Knight());
+        enemyCards.add(new Gobbo());
+        enemyCards.add(new Gobbo());
+
+    }
+
+
 
     @Test
     public void testUnitLister(){
-        ArrayList<UnitCard> playerUnits = new ArrayList<>();
-        ArrayList<UnitCard> enemyUnits = new ArrayList<>();
-        playerUnits.add(new Knight());
-        playerUnits.add(new Knight());
-        enemyUnits.add(new Gobbo());
-        enemyUnits.add(new Gobbo());
-
-        test.outputListOfUnits(playerUnits);
-        test.outputListOfUnits(enemyUnits);
+       // test.outputListOfUnits(playerCards);
+       // test.outputListOfUnits(enemyCards);
     }
 
+    @Test
+    public void outputListOfCards() {
+        SpellTargetedCard fireball = new fireBall();
+        playerCards.add(fireball);
+
+        Hand hand = new Hand((ArrayList<Card>) playerCards);
+        test.outputListOfCards(hand.getHandOfCards());
+    }
 }

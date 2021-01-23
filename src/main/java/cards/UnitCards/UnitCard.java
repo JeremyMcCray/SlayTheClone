@@ -12,7 +12,7 @@ public abstract class UnitCard extends Card {
     int myUnitNumber;
 
     public UnitCard(String name, int health, int shields, int attack, int manaCost) {
-        super(name,manaCost);
+        super(name, manaCost, "fillerText Please Change SAM");
         this.health = health;
         this.shields = shields;
         this.attack = attack;
@@ -62,14 +62,18 @@ public abstract class UnitCard extends Card {
     @Override
     public String toString() {
         return this.getName() + "\n Health: "
-                + this.getHealth() +
-                "\n Shields: "
+                + this.getHealth()
+                + "\n Shields: "
                 + this.getShields()
                 + "\n Attack: "
                 + this.getAttack()
                 + "\n ManaCost: "
-                + this.getManaCost()+"\n";
+                + this.getManaCost()
+                + "\n Description: "
+                + "\n" + this.getDescription()
+                +"\n" ;
     }
 
-    public void play(){}
+    public void play() {
+    }
 }
