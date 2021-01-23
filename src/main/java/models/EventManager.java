@@ -16,7 +16,7 @@ public class EventManager {
         currentEvent = eventStack.pop();
     }
 
-//    private void loadEventsIntoStack() {
+    private void loadEventsIntoStack() {
 //        for (int i = 0; i < currentEvent.baseListeners.size(); i++) {
 //            eventStack.push(currentEvent.baseListeners.get(i));
 //        }
@@ -28,7 +28,7 @@ public class EventManager {
 //    public void next() {
 //        loadNextEvent();
 //        loadEventsIntoStack();
-//    }
+    }
 
     public Event getCurrentEvent() {
         return this.currentEvent;
