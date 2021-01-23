@@ -34,4 +34,8 @@ public class Player {
     public int incMana(int inc) {
         return mana += inc;
     }
+
+    public void draw(int i) {
+        playerDeck.drawCard(i);
+    }
 }
