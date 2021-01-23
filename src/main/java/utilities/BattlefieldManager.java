@@ -8,18 +8,17 @@ import models.Player;
 
 public class BattlefieldManager {
     Player userPlayer;
-    Deck playerOnFieldDeck = userPlayer.getPlayerDeck();
+    Deck playerOnFieldDeck ;
     Player enemyPlayer;
     Battlefield battlefield;
-    EventManager eventManager = new EventManager(roundStart());
+    EventManager eventManager = new EventManager();
 
     public BattlefieldManager(Player userPlayer, Player enemyPlayer, Battlefield battlefield) {
         this.userPlayer = userPlayer;
         this.enemyPlayer = enemyPlayer;
         this.battlefield = battlefield;
+        playerOnFieldDeck = userPlayer.getPlayerDeck();
     }
 
-    public Event roundStart(){
-        return null;
-    }
+
 }

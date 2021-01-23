@@ -6,9 +6,8 @@ public class EventManager {
     Stack<Event> eventStack;
     Event currentEvent;
 
-    public EventManager(Event startingEvent) {
+    public EventManager() {
         eventStack = new Stack<>();
-        currentEvent = startingEvent;
     }
 
     private void loadNextEvent() {
@@ -16,17 +15,18 @@ public class EventManager {
     }
 
     private void loadEventsIntoStack() {
-//        for (int i = 0; i < currentEvent.baseListeners.size(); i++) {
-//            eventStack.push(currentEvent.baseListeners.get(i));
-//        }
-//        for (int i = 0; i < currentEvent.addedListeners.size(); i++) {
-//            eventStack.push(currentEvent.addedListeners.get(i));
-//        }
-//    }
+        for (int i = 0; i < currentEvent.staticActions.size(); i++) {
+            eventStack.push(currentEvent.staticActions.get(i));
+        }
+        for (int i = 0; i < currentEvent.tempActions.size(); i++) {
+            eventStack.push(currentEvent.tempActions.get(i));
+        }
+    }
 
-//    public void next() {
-//        loadNextEvent();
-//        loadEventsIntoStack();
+    public void next() {
+        loadNextEvent();
+        loadEventsIntoStack();
+        runCurrentEvent();
     }
 
     public Event getCurrentEvent() {
@@ -39,5 +39,13 @@ public class EventManager {
 
     public Stack<Event> getEventStack() {
         return this.eventStack;
+    }
+
+    private void runCurrentEvent() {
+        currentEvent.takeAction();
+    }
+
+    public void addEvent(Event event) {
+        this.currentEvent = event;
     }
 }
