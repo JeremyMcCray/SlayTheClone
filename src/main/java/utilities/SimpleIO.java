@@ -20,9 +20,8 @@ public class SimpleIO{
         return output;
     }
 
-    public String introMessage(){
-        String output = "Welcome to the game\n [1] Start Game \n [2] Exit Game";
-        return output;
+    public void introMessage(){
+        System.out.println( "Welcome to the game");
     }
 
     public String outputListOfUnits(List<UnitCard> list){
@@ -33,5 +32,7 @@ public class SimpleIO{
         System.out.println(output.toString());
         return output.toString();
     }
+
+
 
 }
