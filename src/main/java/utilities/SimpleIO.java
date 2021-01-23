@@ -9,6 +9,11 @@ public class SimpleIO{
 
     Scanner in = new Scanner(System.in);
 
+    private static SimpleIO instance = new SimpleIO();
+
+    public static SimpleIO getInstance(){
+        return instance;
+    }
 
     public String getInput(){
         String output = in.nextLine();
