@@ -18,4 +18,8 @@ public class Hand {
     public Card getCardFromHand(int index){
        return handOfCards.get(index);
     }
+
+    public void addCardToHand(Card card){
+        handOfCards.add(card);
+    }
 }

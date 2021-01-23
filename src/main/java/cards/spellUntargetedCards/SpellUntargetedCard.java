@@ -1,6 +1,14 @@
 package cards.spellUntargetedCards;
 
-public class SpellUntargetedCard {
+import cards.Card;
+import models.Player;
 
-    public void play(int position){}
+public abstract class SpellUntargetedCard extends Card {
+
+    public SpellUntargetedCard(String name, int manaCost, String description) {
+        super(name, manaCost, description);
+    }
+
+    public void play(Player playerEffected){}
+
 }

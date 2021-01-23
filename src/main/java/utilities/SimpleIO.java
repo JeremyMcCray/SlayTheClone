@@ -1,5 +1,6 @@
 package utilities;
 
+import cards.Card;
 import cards.UnitCards.UnitCard;
 
 import java.util.List;
@@ -27,6 +28,15 @@ public class SimpleIO{
     public String outputListOfUnits(List<UnitCard> list){
         StringBuilder output= new StringBuilder();
         for (UnitCard card: list) {
+            output.append(card.toString()).append("\n");
+        }
+        System.out.println(output.toString());
+        return output.toString();
+    }
+
+    public String outputListOfCards(List<Card> cards){
+        StringBuilder output= new StringBuilder();
+        for (Card card: cards) {
             output.append(card.toString()).append("\n");
         }
         System.out.println(output.toString());

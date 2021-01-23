@@ -6,16 +6,20 @@ import utilities.SimpleIO;
 public abstract class UnitCard extends Card {
     SimpleIO io = SimpleIO.getInstance();
 
-    int health;
-    int shields;
-    int attack;
-    int myUnitNumber;
+   private int health;
+   private int shields;
+   private int attack;
+   private int myUnitNumber;
 
-    public UnitCard(String name, int health, int shields, int attack, int manaCost) {
-        super(name,manaCost);
+    public UnitCard(String name, int health, int shields, int attack, int manaCost,String description) {
+        super(name, manaCost, description);
         this.health = health;
         this.shields = shields;
         this.attack = attack;
+    }
+
+    public void attack(UnitCard unitAttacked){
+        unitAttacked.takeDamage(this.attack);
     }
 
     public int takeDamage(int damage) {
@@ -26,7 +30,7 @@ public abstract class UnitCard extends Card {
         return this.health;
     }
 
-    public boolean checkForShields(int damage) {
+    private boolean checkForShields(int damage) {
         if (shields > 0) {
             damageShields(damage);
             return true;
@@ -62,14 +66,18 @@ public abstract class UnitCard extends Card {
     @Override
     public String toString() {
         return this.getName() + "\n Health: "
-                + this.getHealth() +
-                "\n Shields: "
+                + this.getHealth()
+                + "\n Shields: "
                 + this.getShields()
                 + "\n Attack: "
                 + this.getAttack()
                 + "\n ManaCost: "
-                + this.getManaCost()+"\n";
+                + this.getManaCost()
+                + "\n Description: "
+                + "\n" + this.getDescription()
+                +"\n" ;
     }
 
-    public void play(){}
+    public void play() {
+    }
 }
