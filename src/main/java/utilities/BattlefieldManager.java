@@ -2,8 +2,7 @@ package utilities;
 
 import cardHandling.Deck;
 import models.Battlefield;
-import models.Event;
-import models.EventManager;
+import events.EventManager;
 import models.Player;
 
 public class BattlefieldManager {
