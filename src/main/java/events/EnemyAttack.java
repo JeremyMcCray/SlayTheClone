@@ -1,7 +1,5 @@
 package events;
 
-import java.util.ArrayList;
-
 public class EnemyAttack extends Event {
 
     public EnemyAttack() {

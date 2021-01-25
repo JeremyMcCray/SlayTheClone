@@ -1,7 +1,5 @@
 package events;
 
-import java.util.ArrayList;
-
 public class RoundStart extends Event{
     public RoundStart() {
         super("Round Start");

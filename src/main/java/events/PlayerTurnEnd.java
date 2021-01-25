@@ -1,7 +1,5 @@
 package events;
 
-import java.util.ArrayList;
-
 public class PlayerTurnEnd extends Event{
 
     public PlayerTurnEnd() {

@@ -1,7 +1,5 @@
 package events;
 
-import java.util.ArrayList;
-
 public class AttackPhaseStart extends Event {
     public AttackPhaseStart() {
         super("Attack Phase");

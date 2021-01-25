@@ -1,9 +1,6 @@
 package events;
 
-import java.util.ArrayList;
-
 public class PlayCardStart extends Event {
-
     public PlayCardStart() {
         //TODO fill in what the base listeners are
         super("Play Card Start");
