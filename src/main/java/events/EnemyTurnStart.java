@@ -2,10 +2,11 @@ package events;
 
 import java.util.ArrayList;
 
-public class EnemyStart extends Event {
-    public EnemyStart() {
+public class EnemyTurnStart extends Event {
+    public EnemyTurnStart() {
         super("Enemy Start");
         ArrayList<Event> staticEvents = new ArrayList<>();
+        staticEvents.add(new EnemyTurnEnd());
         this.setStaticActions(staticEvents);
     }
 
