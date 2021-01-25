@@ -15,11 +15,11 @@ public class EventManager {
     }
 
     private void loadEventsIntoStack() {
-        for (int i = 0; i < currentEvent.staticActions.size(); i++) {
-            eventStack.push(currentEvent.staticActions.get(i));
+        for (int i = 0; i < currentEvent.getStaticActions().size(); i++) {
+            eventStack.push(currentEvent.getStaticActions().get(i));
         }
-        for (int i = 0; i < currentEvent.tempActions.size(); i++) {
-            eventStack.push(currentEvent.tempActions.get(i));
+        for (int i = 0; i < currentEvent.getTempActions().size(); i++) {
+            eventStack.push(currentEvent.getTempActions().get(i));
         }
     }
 
