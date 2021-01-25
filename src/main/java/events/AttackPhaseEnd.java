@@ -4,9 +4,7 @@ import java.util.ArrayList;
 public class AttackPhaseEnd extends Event {
     public AttackPhaseEnd() {
         super("Attack Phase End");
-        ArrayList<Event> staticEvents = new ArrayList<>();
-        staticEvents.add(new RoundEnd());
-        this.setStaticActions(staticEvents);
+        this.addStaticAction(new RoundEnd());
     }
 
     @Override

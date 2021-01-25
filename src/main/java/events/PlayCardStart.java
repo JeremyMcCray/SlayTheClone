@@ -7,9 +7,7 @@ public class PlayCardStart extends Event {
     public PlayCardStart() {
         //TODO fill in what the base listeners are
         super("Play Card Start");
-        ArrayList<Event> staticEvents = new ArrayList<>();
-        staticEvents.add(new PlayCardEnd());
-        this.setStaticActions(staticEvents);
+        this.addStaticAction(new PlayCardEnd());
     }
 
     @Override

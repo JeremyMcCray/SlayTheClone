@@ -5,9 +5,7 @@ import java.util.ArrayList;
 public class RoundEnd extends Event{
     public RoundEnd() {
         super("Round End");
-        ArrayList<Event> staticEvents = new ArrayList<>();
-        staticEvents.add(new RoundStart());
-        this.setStaticActions(staticEvents);
+        this.addStaticAction(new RoundStart());
     }
 
     @Override
