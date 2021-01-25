@@ -7,6 +7,8 @@ public class AttackPhaseStart extends Event {
         super("Attack Phase");
         ArrayList<Event> staticEvents = new ArrayList<>();
         staticEvents.add(new AttackPhaseEnd());
+        staticEvents.add(new EnemyAttack());
+        staticEvents.add(new PlayerAttack());
         this.setStaticActions(staticEvents);
     }
 

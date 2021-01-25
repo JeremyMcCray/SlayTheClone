@@ -1,12 +1,11 @@
 package events;
-
 import java.util.ArrayList;
 
-public class PlayerTurnStart extends Event {
-    public PlayerTurnStart() {
-        super("Player Start");
+public class AttackPhaseEnd extends Event {
+    public AttackPhaseEnd() {
+        super("Attack Phase End");
         ArrayList<Event> staticEvents = new ArrayList<>();
-        staticEvents.add(new PlayerTurnEnd());
+        staticEvents.add(new RoundEnd());
         this.setStaticActions(staticEvents);
     }
 

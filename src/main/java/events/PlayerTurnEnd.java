@@ -2,11 +2,11 @@ package events;
 
 import java.util.ArrayList;
 
-public class EnemyAttackEvent extends Event {
+public class PlayerTurnEnd extends Event{
 
-    public EnemyAttackEvent() {
+    public PlayerTurnEnd() {
         //TODO fill in what the base listeners are
-        super("EnemyAttackEvent", baseListeners);
+        super("PlayerTurnEndEvent");
     }
 
     @Override

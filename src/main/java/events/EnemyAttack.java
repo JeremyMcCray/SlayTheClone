@@ -2,12 +2,11 @@ package events;
 
 import java.util.ArrayList;
 
-public class RoundEndEvent extends Event{
+public class EnemyAttack extends Event {
 
-
-    public RoundEndEvent() {
+    public EnemyAttack() {
         //TODO fill in what the base listeners are
-        super("RoundEndEvent", baseListeners);
+        super("Enemy Attack");
     }
 
     @Override
