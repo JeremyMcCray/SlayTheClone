@@ -11,6 +11,10 @@ public class Hand {
         this.handOfCards = handOfCards;
     }
 
+    public Hand() {
+        this.handOfCards = new ArrayList<Card>();
+    }
+
     public ArrayList<Card> getHandOfCards() {
         return handOfCards;
     }
