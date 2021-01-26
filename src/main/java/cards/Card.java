@@ -31,7 +31,7 @@ public abstract class Card {
                 + "\n ManaCost: "
                 + this.getManaCost()
                 + "\n Description: "
-                + this.getDescription() +"\n" ;
+                + this.getDescription() + "\n";
         return output;
     }
 }

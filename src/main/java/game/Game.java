@@ -19,7 +19,7 @@ public abstract class Game {
 
         this.eventManager = new EventManager();
         this.battlefieldManager = new BattlefieldManager(this.player, this.enemy);
-        this.simpleIO = new SimpleIO();
+        this.simpleIO = SimpleIO.getInstance();
         this.gameOver = false;
     }
 
