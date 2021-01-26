@@ -11,7 +11,7 @@ public class applicationRunner {
         mainMenu.showChoices();
         String input = simp.getInput();
         mainMenu.getInput(input);
-        mainMenu.validateChoice();
+        mainMenu.validateChoice() ;
 
 
     }
