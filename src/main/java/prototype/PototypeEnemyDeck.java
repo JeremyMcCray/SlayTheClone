@@ -1,4 +1,4 @@
-package Prototype;
+package prototype;
 
 import cardHandling.Deck;
 
