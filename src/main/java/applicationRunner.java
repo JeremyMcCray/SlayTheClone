@@ -9,8 +9,6 @@ public class applicationRunner {
         simp.introMessage();
         MainMenu mainMenu = new MainMenu();
         mainMenu.showChoices();
-        String input = simp.getInput();
-        mainMenu.getInput(input);
         mainMenu.validateChoice();
 
 

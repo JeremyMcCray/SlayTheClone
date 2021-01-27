@@ -2,13 +2,29 @@ package menus;
 
 import utilities.SimpleIO;
 
-public class MainMenu {
-    SimpleIO simpleIO = SimpleIO.getInstance();
+import java.util.ArrayList;
+import java.util.HashMap;
+
+public class MainMenu extends AbstractMenu {
     String choices = "[1]Start Game\n[2]Quit Game\n[3]Demo Mode";
     String choice = "";
 
-    public void getInput(String choice) {
-        this.choice = choice;
+    public MainMenu(){
+        initializeCommands();
+    }
+
+    @Override
+    public void initializeCommands() {
+        menuCommands = new HashMap<>();
+        menuCommands.put("[1] Start Game", MenuCommands.STARTGAME);
+        menuCommands.put("[2] Exit Game", MenuCommands.EXIT);
+        menuCommands.put("[3] Demo Mode",MenuCommands.DEMOMODE);
+
+    }
+
+    @Override
+    public void processCommand(MenuCommands cmd, ArrayList<String> args) {
+
     }
 
     public void validateChoice() {
@@ -18,14 +34,13 @@ public class MainMenu {
                 System.out.println(1);
                 break;
             case "2":
-                System.out.println("Goodbye!");
+
                 System.exit(1);
             case "3":
                 System.out.println("Demo Mode");
                 break;
             default:
                 System.out.println("Bad input.");
-                getInput(simpleIO.getInput());
                 validateChoice();
                 break;
         }
@@ -34,4 +49,6 @@ public class MainMenu {
     public void showChoices() {
         System.out.println(choices);
     }
+
+
 }

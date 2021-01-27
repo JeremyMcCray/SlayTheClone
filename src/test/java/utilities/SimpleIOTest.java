@@ -7,6 +7,7 @@ import cards.UnitCards.Gobbo;
 import cards.UnitCards.Knight;
 import cards.spellTargetedCards.SpellTargetedCard;
 import cards.spellTargetedCards.fireBall;
+import menus.MainMenu;
 import org.junit.Before;
 import org.junit.Test;
 import java.util.ArrayList;
@@ -43,5 +44,11 @@ public class SimpleIOTest {
 
         Hand hand = new Hand((ArrayList<Card>) playerCards);
         test.outputListOfCards(hand.getHandOfCards());
+    }
+
+    @Test
+    public void outputMenuChoices(){
+        MainMenu menu = new MainMenu();
+        menu.outputMenuChoices();
     }
 }

@@ -7,18 +7,24 @@ import java.util.List;
 import java.util.Scanner;
 
 public class SimpleIO {
-
-    Scanner in = new Scanner(System.in);
-
     private static final SimpleIO instance = new SimpleIO();
 
     public static SimpleIO getInstance() {
         return instance;
     }
 
-    public String getInput() {
-        String output = in.nextLine();
-        return output;
+    public static void println(String message) {
+        System.out.println(message);
+    }
+
+    public static void print(String msg) {
+        System.out.print(msg);
+    }
+
+    public static String getStringInput(String prompt) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println(prompt);
+        return scanner.nextLine();
     }
 
     public void introMessage() {
@@ -42,6 +48,5 @@ public class SimpleIO {
         System.out.println(output.toString());
         return output.toString();
     }
-
 
 }
