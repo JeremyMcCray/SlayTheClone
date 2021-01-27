@@ -4,13 +4,13 @@ import utilities.SimpleIO;
 
 public class applicationRunner {
     public static void main(String[] args) {
-        SimpleIO simp = new SimpleIO();
+        SimpleIO simpleIO = new SimpleIO();
         MainMenu mainMenu = new MainMenu();
 
 
         mainMenu.outputMenuChoices();
 
-        mainMenu.processCommand(simp.getStringInput());
+        mainMenu.processCommand(simpleIO.getStringInput());
 
     }
 }

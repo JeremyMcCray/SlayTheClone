@@ -37,8 +37,9 @@ public class MainMenu extends AbstractMenu {
 
     public void validateChoice() {
         switch (currentCommand) {
-            case "start game":
+            case "Start Game":
                 //Start the game
+
                 System.out.println("I'm starting the game now");
                 break;
             case "Exit Game":
