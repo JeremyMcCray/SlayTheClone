@@ -6,8 +6,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class MainMenu extends AbstractMenu {
-    String choices = "[1]Start Game\n[2]Quit Game\n[3]Demo Mode";
-    String choice = "";
+    String currentCommand;
 
     public MainMenu(){
         initializeCommands();
@@ -16,39 +15,42 @@ public class MainMenu extends AbstractMenu {
     @Override
     public void initializeCommands() {
         menuCommands = new HashMap<>();
-        menuCommands.put("[1] Start Game", MenuCommands.STARTGAME);
-        menuCommands.put("[2] Exit Game", MenuCommands.EXIT);
-        menuCommands.put("[3] Demo Mode",MenuCommands.DEMOMODE);
+        menuCommands.put("start game", MenuCommands.STARTGAME);
+        menuCommands.put("exit game", MenuCommands.EXIT);
+        menuCommands.put("demo mode",MenuCommands.DEMOMODE);
 
     }
 
     @Override
-    public void processCommand(MenuCommands cmd, ArrayList<String> args) {
+    // this needs work for validation
+    public void processCommand(MenuCommands cmd) {
+        //validateChoice();
+    }
+
+    // this needs work for validation
+    public void processCommand(String cmd) {
+        currentCommand = cmd;
+        //processCommand(stringToCmd(cmd));
+        validateChoice();
 
     }
 
     public void validateChoice() {
-        switch (choice) {
-            case "1":
+        switch (currentCommand) {
+            case "start game":
                 //Start the game
-                System.out.println(1);
+                System.out.println("I'm starting the game now");
                 break;
-            case "2":
-
+            case "Exit Game":
+                System.out.println("Im exiting the game now");
                 System.exit(1);
-            case "3":
-                System.out.println("Demo Mode");
+            case "Demo Mode":
+                System.out.println("Demo Mode Starting");
                 break;
             default:
-                System.out.println("Bad input.");
-                validateChoice();
+                processCommand(SimpleIO.getInstance().getStringInput("Bad input."));
                 break;
         }
     }
-
-    public void showChoices() {
-        System.out.println(choices);
-    }
-
 
 }

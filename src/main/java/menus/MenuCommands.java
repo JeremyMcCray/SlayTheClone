@@ -4,6 +4,7 @@ public enum MenuCommands {
     STARTGAME,
     EXIT,
     BACK,
-    DEMOMODE
+    DEMOMODE,
+    BADINPUT
 
 }

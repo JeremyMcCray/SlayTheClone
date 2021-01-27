@@ -12,7 +12,7 @@ public abstract class AbstractMenu {
 
     public abstract void initializeCommands();
 
-    public abstract void processCommand(MenuCommands cmd, ArrayList<String> args);
+    public abstract void processCommand(MenuCommands cmd);
 
     public boolean commandExists(String cmd) {
         return this.menuCommands != null && this.menuCommands.containsKey(cmd.toLowerCase());
@@ -22,4 +22,7 @@ public abstract class AbstractMenu {
         menuCommands.keySet().iterator().forEachRemaining(System.out::println);
     }
 
+    public MenuCommands stringToCmd(String cmd){
+        return menuCommands.get(cmd.toLowerCase());
+    }
 }

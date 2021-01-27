@@ -5,12 +5,12 @@ import utilities.SimpleIO;
 public class applicationRunner {
     public static void main(String[] args) {
         SimpleIO simp = new SimpleIO();
-
-        simp.introMessage();
         MainMenu mainMenu = new MainMenu();
-        mainMenu.showChoices();
-        mainMenu.validateChoice();
 
+
+        mainMenu.outputMenuChoices();
+
+        mainMenu.processCommand(simp.getStringInput());
 
     }
 }

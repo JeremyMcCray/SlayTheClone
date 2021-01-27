@@ -7,29 +7,33 @@ import java.util.List;
 import java.util.Scanner;
 
 public class SimpleIO {
+
     private static final SimpleIO instance = new SimpleIO();
 
     public static SimpleIO getInstance() {
         return instance;
     }
 
-    public static void println(String message) {
+    public void println(String message) {
         System.out.println(message);
     }
 
-    public static void print(String msg) {
+    public void print(String msg) {
         System.out.print(msg);
     }
 
-    public static String getStringInput(String prompt) {
+    //for getting input with a message
+    public String getStringInput(String prompt) {
         Scanner scanner = new Scanner(System.in);
         System.out.println(prompt);
         return scanner.nextLine();
     }
 
-    public void introMessage() {
-        System.out.println("Welcome to the game");
+    //for getting input with no message
+    public String getStringInput() {
+        return getStringInput(" ");
     }
+
 
     public String outputListOfUnits(List<UnitCard> list) {
         StringBuilder output = new StringBuilder();
