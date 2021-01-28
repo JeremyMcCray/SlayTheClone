@@ -59,6 +59,6 @@ public class Battlefield {
         return "[" +
                 playerUnits.stream().map(e -> e.getName().charAt(0) + "").collect(Collectors.joining(","))
                 +"]  |  [" + enemyUnits.stream().map(e -> e.getName().charAt(0) + "").collect(Collectors.joining(",")) +
-                "]";
+                "]\n";
     }
 }

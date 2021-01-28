@@ -6,11 +6,16 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class MainMenu extends AbstractMenu {
+    MainMenu mainMenu;
+
+
+
     String currentCommand;
 
     public MainMenu(){
         initializeCommands();
     }
+
 
     @Override
     public void initializeCommands() {
@@ -39,7 +44,6 @@ public class MainMenu extends AbstractMenu {
         switch (currentCommand) {
             case "Start Game":
                 //Start the game
-
                 System.out.println("I'm starting the game now");
                 break;
             case "Exit Game":

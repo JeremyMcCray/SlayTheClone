@@ -16,7 +16,6 @@ public abstract class Game {
     public Game(Player player, Player enemy) {
         this.player = player;
         this.enemy = enemy;
-
         this.eventManager = new EventManager();
         this.battlefieldManager = new BattlefieldManager(this.player, this.enemy);
         this.simpleIO = SimpleIO.getInstance();
