@@ -4,7 +4,6 @@ import models.Player;
 
 public abstract class AbstractNode {
 
-    private static AbstractNode thisNode;
     private Player player;
     private AbstractNode nextNode;
 
@@ -22,5 +21,9 @@ public abstract class AbstractNode {
 
     public void setNextNode(AbstractNode nextNode) {
         this.nextNode = nextNode;
+    }
+
+    public AbstractNode getSelf(){
+        return  this;
     }
 }
